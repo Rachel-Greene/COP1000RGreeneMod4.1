@@ -1,12 +1,18 @@
 # This program calculates prices for custom house signs.#
 
-#Function - Validate the characters are a number
+# Validate the Characters and compute the text cost ##
 def checkInputChar(testChar):
   if testChar.isnumeric():
     return int(testChar)
   else:
     print(f"{testChar} is not a number. Please start over and try again.")
     exit()
+
+def computeCharCost(preValChar): #this is the value from previous checkInputChar function
+  if preValChar <= 5:
+    return 0
+  if preValChar > 5:
+    return 4 * (preValChar - 5)
 
 ## Validate the Wood Type ##
 def checkInputWood(testWood):
@@ -15,9 +21,10 @@ def checkInputWood(testWood):
   if testWood == "pine" or testWood == "Pine":
     return 0
   else:
-    print(f"{testWood} is not a valid wood trype. Please enter Pine or Oak")
+    print(f"{testWood} is not a valid wood type. Please enter Pine or Oak")
     exit()
-#Function - Calulate the valid character input 
+    
+## Validate the text input ##
 def checkInputText(testText):
   if testText == "gold" or testText == "Gold":
     return 15
@@ -28,6 +35,8 @@ def checkInputText(testText):
     exit()
 
 
+
+  
 # Declare and initialize variables here.
 charge = 0.00
 minCharge = 35.00
@@ -42,7 +51,7 @@ colorText = input("White, Black, or Gold text?: ")
 ## CHARGES
 charge = 0.00
 minCharge = 35.00
-charCharge = 4 * (numCharValid - 5)
+charCharge = computeCharCost(numCharValid)
 woodCharge = checkInputWood(woodType)
 textCharge = checkInputText(colorText)
 
