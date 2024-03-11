@@ -49,6 +49,7 @@ charCharge = computeCharCost(numCharValid)
 woodCharge = checkInputWood(woodType)
 textCharge = checkInputText(colorText)
 
+
 ##### Output of total cost #####
 totalCost = charge +minCharge +charCharge +woodCharge +textCharge
-print("The price is: ${:.2f}".format(totalCost))
+print("Thecharge for this sign is: ${:.2f}".format(totalCost))
