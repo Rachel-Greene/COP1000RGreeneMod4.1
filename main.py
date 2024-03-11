@@ -1,4 +1,4 @@
-# This program calculates prices for custom house signs.#
+# This program calculates prices for custom signs.#
 
 # Validate the Characters and compute the text cost ##
 def checkInputChar(testChar):
@@ -35,9 +35,7 @@ def checkInputText(testText):
     exit()
 
 
-
-  
-# Declare and initialize variables here.
+##### Declare and initialize variables here. #####
 charge = 0.00
 minCharge = 35.00
 numChar = input("Number of characters: ")
@@ -46,18 +44,11 @@ woodType = input("Oak or Pine?: ")
 colorText = input("White, Black, or Gold text?: ")
 
 
-
-
-## CHARGES
-charge = 0.00
-minCharge = 35.00
+##### Computing Charges ##### 
 charCharge = computeCharCost(numCharValid)
 woodCharge = checkInputWood(woodType)
 textCharge = checkInputText(colorText)
 
-# Output Charge for this sign.
-print(charCharge)
-print(woodCharge)
-print(textCharge)
-print("The charge for this sign is $" + str(charge +minCharge +charCharge +woodCharge +textCharge))
-
+##### Output of total cost #####
+totalCost = charge +minCharge +charCharge +woodCharge +textCharge
+print("The price is: ${:.2f}".format(totalCost))
