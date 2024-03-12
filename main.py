@@ -52,4 +52,4 @@ textCharge = checkInputText(colorText)
 
 ##### Output of total cost #####
 totalCost = charge +minCharge +charCharge +woodCharge +textCharge
-print("Thecharge for this sign is: ${:.2f}".format(totalCost))
+print("The charge for this sign is: ${:.2f}".format(totalCost))
