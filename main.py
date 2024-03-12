@@ -48,8 +48,7 @@ colorText = input("White, Black, or Gold text?: ")
 charCharge = computeCharCost(numCharValid)
 woodCharge = checkInputWood(woodType)
 textCharge = checkInputText(colorText)
-
-
-##### Output of total cost #####
 totalCost = charge +minCharge +charCharge +woodCharge +textCharge
+
+##### Output for customer #####
 print("The charge for this sign is: ${:.2f}".format(totalCost))
